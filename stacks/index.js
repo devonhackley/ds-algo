@@ -1,6 +1,6 @@
 'use strict';
 
-  function Stack() {
+  const Stack = module.exports = function() {
   var items = [];
 
   this.push = (element) => {
@@ -42,3 +42,9 @@ stack.push(11);
 stack.push(15);
 console.log(stack.size());
 console.log(stack.isEmpty());
+stack.print();
+
+stack.pop();
+stack.pop();
+console.log(stack.size());
+stack.print();
