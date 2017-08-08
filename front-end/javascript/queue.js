@@ -23,6 +23,10 @@ Queue.prototype.dequeue = function(){
 
 }
 
+Queue.prototype.peek = function(){
+  return this.storage[this.head];
+}
+
 Queue.prototype.count = function(){
   return this.tail - this.head;
 }

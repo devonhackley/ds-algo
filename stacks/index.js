@@ -32,19 +32,19 @@
   };
 };
 
-var stack = new Stack();
-console.log(stack.isEmpty());
-
-stack.push(5);
-stack.push(8);
-stack.print();
-stack.push(11);
-stack.push(15);
-console.log(stack.size());
-console.log(stack.isEmpty());
-stack.print();
-
-stack.pop();
-stack.pop();
-console.log(stack.size());
-stack.print();
+// var stack = new Stack();
+// console.log(stack.isEmpty());
+//
+// stack.push(5);
+// stack.push(8);
+// stack.print();
+// stack.push(11);
+// stack.push(15);
+// console.log(stack.size());
+// console.log(stack.isEmpty());
+// stack.print();
+//
+// stack.pop();
+// stack.pop();
+// console.log(stack.size());
+// stack.print();
