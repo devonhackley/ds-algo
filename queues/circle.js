@@ -9,6 +9,9 @@ const CircleQueue = function(size){
   this.increment = (data) => {
     return (data + 1) % this.length;
   }
+  this.isEmpty = () => {
+    return this._size === 0;
+  }
 }
 
 CircleQueue.prototype.initialize = (size) => {
@@ -23,6 +26,12 @@ CircleQueue.prototype.enqueue = function(data){
 }
 
 CircleQueue.prototype.dequeue = function(){
-  
-  return
+  if(this.isEmpty()) console.log('Queue is empty');
+
+  this._size--;
+
+  var deleted = this.queue[this.start];
+  this.queue[this.start] = null;
+  this.start = this.increment(this.start);
+  return deleted;
 }
