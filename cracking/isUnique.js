@@ -19,5 +19,5 @@ function isUnqiue(str){
  return true;
 }
 
-var test = '38456hgf8';
+var test = '23dgjt';
 console.log(isUnqiue(test));
