@@ -1,5 +1,7 @@
 'use strict';
 
+
+// Cracking the Coding Interview: isUnique 0(n)
 function isUnqiue(str){
  let front = 0;
  let back = str.length - 1;
