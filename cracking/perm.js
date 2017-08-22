@@ -9,7 +9,7 @@ function checkPerm(str1, str2){
 
   let strHash = {};
   for(var char in s1){
-    
+    if(!strHash.hasProperty(char))
   }
 
 }
