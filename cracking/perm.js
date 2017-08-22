@@ -5,7 +5,7 @@
 function checkPerm(str1, str2){
   let s1 = str1.toLowerCase();
   let s2 = str2.toLowerCase();
-  let count = 0;
+
 
   let strHash = {};
   for(var i = 0; i < s1.length; i++){
@@ -18,7 +18,6 @@ function checkPerm(str1, str2){
       return false;
     }
     else{
-      count += 1;
       strHash[s2[i]]--
     }
   }
@@ -31,6 +30,6 @@ function checkPerm(str1, str2){
   return true;
 }
 
-var test1 = "The Big Bang Theory";
-var test2 = "B B T Tehgiangyroeh";
+var test1 = "abc";
+var test2 = "cac";
 console.log(checkPerm(test1, test2));
