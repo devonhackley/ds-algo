@@ -4,12 +4,17 @@
 
 function removeDuplicates(list){
   let current = list.head;
+  let hash = {};
   while(current){
     let runner = current;
     if(runner.next.val === current.val){
       runner.next = runner.next.next;
+    } else {
+      current = current.next;
+      prev = prev.next;
     }
   }
+  return;
 }
 
 const Node = function(val){
@@ -37,28 +42,7 @@ LinkedList.prototype.add = function(val){
   this.length++;
 }
 
-LinkedList.prototype.remove = function(val){
-  var current = this.head;
-  while(current){
-    if(current.val === val){
-      if(current === this.head && current === this.tail){
-        this.head = null;
-        this.tail = null;
-      } else if(current === this.head){
-        this.head = this.head.next;
-        this.head.previous = null;
-      } else if(current === this.tail){
-        this.tail = this.tail.previous;
-        this.tail.next = null;
-      } else {
-        current.previous.next = current.next;
-        current.next.previous = current.previous;
-      }
-      this.length--;
-    }
-    current = current.next;
-  }
-}
+
 
 
 var newList = new LinkedList();
@@ -73,4 +57,5 @@ newList.add(5);
 newList.add(2);
 
 
-console.log(removeDuplicates(newList));
+removeDuplicates(newList)
+console.log(newList);

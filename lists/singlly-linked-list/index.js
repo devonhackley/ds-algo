@@ -58,6 +58,29 @@ const LinkedList = function() {
   }
 }
 
+LinkedList.prototype.remove = function(val){
+  var current = this.head;
+  while(current){
+    if(current.val === val){
+      if(current === this.head && current === this.tail){
+        this.head = null;
+        this.tail = null;
+      } else if(current === this.head){
+        this.head = this.head.next;
+        this.head.previous = null;
+      } else if(current === this.tail){
+        this.tail = this.tail.previous;
+        this.tail.next = null;
+      } else {
+        current.previous.next = current.next;
+        current.next.previous = current.previous;
+      }
+      this.length--;
+    }
+    current = current.next;
+  }
+}
+
 var list = new LinkedList();
 list.append(15);
 list.append(10);
