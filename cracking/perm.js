@@ -8,12 +8,29 @@ function checkPerm(str1, str2){
   let count = 0;
 
   let strHash = {};
-  for(var char in s1){
-    if(!strHash.hasProperty(char))
+  for(var i = 0; i < s1.length; i++){
+    var char = s1[i];
+    (!strHash.hasOwnProperty(char)) ? strHash[char] = 1 : strHash[char]++;
   }
 
+  for(var i = 0; i < s2.length; i++ ){
+    if(!strHash.hasOwnProperty(s2[i])) {
+      return false;
+    }
+    else{
+      count += 1;
+      strHash[s2[i]]--
+    }
+  }
+
+  for(var char in strHash){
+    if(strHash[char] != 0){
+      return false;
+    }
+  }
+  return true;
 }
 
-var test1 = "ab";
-var test2 = "eidbaooo";
+var test1 = "The Big Bang Theory";
+var test2 = "B B T Tehgiangyroeh";
 console.log(checkPerm(test1, test2));
