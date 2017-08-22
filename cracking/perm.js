@@ -1,6 +1,6 @@
 'use strict';
 
-// Cracking the Coding Interview: Permutation
+// Cracking the Coding Interview: Permutation O(n) using hash table
 
 function checkPerm(str1, str2){
   let s1 = str1.toLowerCase();
