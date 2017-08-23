@@ -1,6 +1,6 @@
 'use strict';
 
-//Cracking the Coding Interview: Removing Duplicates
+//Cracking the Coding Interview: Removing Duplicates 0(n) with extra data struc
 
 function removeDuplicates(list){
   let current = list.head;
@@ -29,7 +29,7 @@ const Node = function(val){
 }
 
 const LinkedList = function(){
-  var length= 0;
+  var length = 0;
   var head = null;
 }
 
@@ -41,7 +41,7 @@ LinkedList.prototype.add = function(val){
     node.next = this.head;
     this.head = node;
   }
-  this.length++;
+  this.length+=1;
 
 }
 
