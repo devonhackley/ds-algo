@@ -4,17 +4,22 @@
 
 function removeDuplicates(list){
   let current = list.head;
-  let hash = {};
-  while(current){
-    let runner = current;
-    if(runner.next.val === current.val){
-      runner.next = runner.next.next;
-    } else {
-      current = current.next;
-      prev = prev.next;
+  let nextNode = current.next;
+  let nodes = {};
+
+  nodes[current.val] = 1;
+
+  while(nextNode){
+    let data = nextNode.val;
+    if(nodes[data]){
+      console.log(current.val);
+      current.next = nextNode.next;
+    }else {
+      nodes[data] = 1;
+      current = nextNode;
     }
+    nextNode = nextNode.next;
   }
-  return;
 }
 
 const Node = function(val){
@@ -24,38 +29,35 @@ const Node = function(val){
 }
 
 const LinkedList = function(){
-  var length = 0;
+  var length= 0;
   var head = null;
-  var tail = null;
 }
 
 LinkedList.prototype.add = function(val){
   var node = new Node(val);
   if(!this.head){
     this.head = node;
-    this.tail = node;
   } else {
-    node.previous = this.tail;
-    this.tail.next = node;
-    this.tail = node;
+    node.next = this.head;
+    this.head = node;
   }
   this.length++;
+
 }
 
 
 
 
-var newList = new LinkedList();
-newList.add(2);
-newList.add(3);
-newList.add(4);
-newList.add(5);
-newList.add(2)
-newList.add(6);
-newList.add(7);
-newList.add(5);
-newList.add(2);
+var blueList = new LinkedList();
+blueList.add(1);
+blueList.add(1);
+blueList.add(4);
+blueList.add(5);
+blueList.add(6);
+blueList.add(6);
 
 
-removeDuplicates(newList)
-console.log(newList);
+
+console.log('beforeee',blueList);
+removeDuplicates(blueList)
+console.log('after', blueList);
