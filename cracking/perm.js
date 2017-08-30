@@ -31,5 +31,5 @@ function checkPerm(str1, str2){
 }
 
 var test1 = "abc";
-var test2 = "cac";
+var test2 = "cba";
 console.log(checkPerm(test1, test2));

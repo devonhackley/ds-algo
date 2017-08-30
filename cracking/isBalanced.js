@@ -3,6 +3,6 @@
 // Coding Challenge: Balanced Brackets
 
 
-function isBalanced(){
+function isBalanced(str){
 
 }
