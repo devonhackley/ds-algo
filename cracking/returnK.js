@@ -1,14 +1,6 @@
 'use strict';
 
 //Coding Challenge: Return Kth to Last O(n), iterative
-const Node  = function(val){
-  this.val = val;
-  this.next = null;
-}
-
-const LinkedList = function(){
-  this.head = null;
-}
 
 function returnK(list, k){
 
@@ -35,6 +27,16 @@ function returnK(list, k){
   return value;
 }
 
+
+const Node  = module.exports = function(val){
+  this.val = val;
+  this.next = null;
+}
+
+const LinkedList = module.exports =  function(){
+  this.head = null;
+}
+
 //Test
 
 var temp = new LinkedList();
@@ -55,4 +57,4 @@ node4.next = node5;
 node5.next = node6;
 // console.log(temp.head);
 // console.log(temp.head.next);
-console.log(returnK(temp,3));
+console.log('sadasd',returnK(temp,3));
