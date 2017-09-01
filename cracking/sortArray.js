@@ -3,8 +3,6 @@
 //Coding Challenge: sort an array in decreasing frequency
 
 
-
-
 function sortArray(arr){
   let frequency = {};
   let newArr = [];
