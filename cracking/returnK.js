@@ -1,6 +1,6 @@
 'use strict';
 
-//Coding Challenge: Return Kth to Last O(n), recursive
+//Coding Challenge: Return Kth to Last O(n), iterative
 const Node  = function(val){
   this.val = val;
   this.next = null;
@@ -23,10 +23,10 @@ function returnK(list, k){
   }
 
 
-  let nextNode = head; //second pointer
+  let nextNode = list.head; //second pointer
 
   // Move both pointers together, when the first is at the end, the second pointer will be the kth node
-  while(!current){
+  while(current != null){
     current = current.next;
     nextNode = nextNode.next;
   }
@@ -44,6 +44,7 @@ var node3 = new Node(3);
 var node4 = new Node(4);
 var node5 = new Node(5);
 var node6 = new Node(6);
+
 
 
 temp.head = node1;
