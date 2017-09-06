@@ -14,8 +14,19 @@ const LinkedList = function(){
   this.head = null;
 }
 
-LinkedList.prototype.deleteNode = function(list, node){
+LinkedList.prototype.deleteNode = function(list, value){
+  let currentNode = list.head;
 
+  if(currentNode.val === value){
+      return list.head.next;
+  }
+  while(!currentNode.next){
+    if(currentNode.next.val === value){
+      return list.head;
+    }
+    currentNode = currentNode.next;
+  }
+  return list;
 }
 
 
@@ -23,8 +34,8 @@ function deleteMiddle(list){
   let current = list.head;
   let nextNode = current.next;
 
-  while(current.next){
-
+  while(!current.next){
+    
 
   }
 };
