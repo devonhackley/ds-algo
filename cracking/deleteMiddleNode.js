@@ -1,12 +1,32 @@
 'use strict';
-const Node = require('./returnK.js');
-const LinkedList = require('./returnK.js');
+
 
 //Coding Challenge: Delete the middle node of the list
 
 
+
+const Node  = function(val){
+  this.val = val;
+  this.next = null;
+}
+
+const LinkedList = function(){
+  this.head = null;
+}
+
+LinkedList.prototype.deleteNode = function(list){
+  
+}
+
+
 function deleteMiddle(list){
   let current = list.head;
+  let nextNode = current.next;
+
+  while(current.next){
+
+
+  }
 };
 
 
