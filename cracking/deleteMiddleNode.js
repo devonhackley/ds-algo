@@ -14,8 +14,8 @@ const LinkedList = function(){
   this.head = null;
 }
 
-LinkedList.prototype.deleteNode = function(list){
-  
+LinkedList.prototype.deleteNode = function(list, node){
+
 }
 
 
