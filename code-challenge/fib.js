@@ -22,3 +22,13 @@ function simpleFibonaci(num){
   }
   return b;
 }
+
+//Recuresive optimized
+function optimizedFibonaci(num, hash){
+  hash = hash || {};
+
+  if(hash[num]) return hash[num];
+  if(num <=1) return 1;
+
+  return hash[num] = optimizedFibonaci(num - 1, hash) + optimizedFibonaci(num - 2, hash);
+}
